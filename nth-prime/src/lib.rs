@@ -19,13 +19,13 @@ fn is_prime(n: u32) -> bool {
 }
 
 pub fn nth(n: u32) -> u32 {
-    let mut primes: Vec<u32> = vec![2];
+    let mut index = 0;
     let mut last_prime = 2;
-    while primes.len() <= (n as usize) {
+    while index < n {
         for n in (last_prime+1)..std::u32::MAX {
             if is_prime(n) {
-                primes.push(n);
                 last_prime = n;
+                index += 1;
                 break;
             }
         }
