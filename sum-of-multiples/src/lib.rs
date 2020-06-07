@@ -1,14 +1,14 @@
+use std::collections::HashSet;
+
 pub fn sum_of_multiples(limit: u32, factors: &[u32]) -> u32 {
-    let mut sum: u32 = 0;
-    let mut multiples: Vec<u32> = Vec::new();
+    let mut multiples: HashSet<u32> = HashSet::new();
 
     for factor in factors {
-        let mut numbers = (1..)
+        let numbers = (1..)
             .map(|x| *factor * x)
             .take_while(|x| *x < limit)
-            .collect::<Vec<u32>>();
-        multiples.append(&mut numbers);
+            .collect::<HashSet<u32>>();
+        multiples.extend(numbers);
     }
-    println!("For factor {:?} we found numbers {:?}", factors, multiples);
-    sum
+    multiples.iter().sum::<u32>()
 }
