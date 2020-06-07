@@ -1,4 +1,3 @@
-
 fn is_prime(n: u32) -> bool {
     assert!(n > 0, "n must be a positif number");
     if n <= 2 {
@@ -21,7 +20,7 @@ fn is_prime(n: u32) -> bool {
 pub fn nth(n: u32) -> u32 {
     let mut last_prime = 2;
     for _ in 0..n {
-        for candidate in (last_prime+1)..std::u32::MAX {
+        for candidate in (last_prime + 1)..std::u32::MAX {
             if is_prime(candidate) {
                 last_prime = candidate;
                 break;
