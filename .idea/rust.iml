@@ -11,6 +11,9 @@
       <sourceFolder url="file://$MODULE_DIR$/leap/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/nth-prime/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/nth-prime/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/beer-song/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/beer-song/tests" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/beer-song/target" />
       <excludeFolder url="file://$MODULE_DIR$/hello-world/target" />
       <excludeFolder url="file://$MODULE_DIR$/leap/target" />
       <excludeFolder url="file://$MODULE_DIR$/nth-prime/target" />
