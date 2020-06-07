@@ -7,7 +7,7 @@ fn is_prime(n: u32) -> bool {
     if (n % 2) == 0 {
         return false;
     }
-    // Try dividing
+    // Try dividing by every odd number >= 3 until we reach half of n
     let mut divisor = 3;
     while divisor <= (n/2) {
         if n % divisor == 0 {
