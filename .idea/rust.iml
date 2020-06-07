@@ -15,7 +15,10 @@
       <sourceFolder url="file://$MODULE_DIR$/beer-song/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/proverb/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/proverb/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/difference-of-squares/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/difference-of-squares/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/beer-song/target" />
+      <excludeFolder url="file://$MODULE_DIR$/difference-of-squares/target" />
       <excludeFolder url="file://$MODULE_DIR$/hello-world/target" />
       <excludeFolder url="file://$MODULE_DIR$/leap/target" />
       <excludeFolder url="file://$MODULE_DIR$/nth-prime/target" />
