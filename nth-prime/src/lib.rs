@@ -19,13 +19,11 @@ fn is_prime(n: u32) -> bool {
 }
 
 pub fn nth(n: u32) -> u32 {
-    let mut index = 0;
     let mut last_prime = 2;
-    while index < n {
-        for n in (last_prime+1)..std::u32::MAX {
-            if is_prime(n) {
-                last_prime = n;
-                index += 1;
+    for _ in 0..n {
+        for candidate in (last_prime+1)..std::u32::MAX {
+            if is_prime(candidate) {
+                last_prime = candidate;
                 break;
             }
         }
