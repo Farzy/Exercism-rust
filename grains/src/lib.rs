@@ -8,7 +8,7 @@ pub fn square(s: u32) -> u64 {
 }
 
 pub fn total() -> u64 {
-    (1..=64).map(|n| square(n)).sum::<u64>()
+    (1..=64).map(square).sum::<u64>()
 }
 
 pub fn total_no_iter() -> u64 {
