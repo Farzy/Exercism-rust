@@ -63,3 +63,16 @@ fn test_square_greater_than_64_raises_an_exception() {
 fn test_returns_the_total_number_of_grains_on_the_board() {
     assert_eq!(grains::total(), 18_446_744_073_709_551_615);
 }
+
+#[test]
+fn test_returns_the_total_number_of_grains_on_the_board_no_iter() {
+    assert_eq!(grains::total_no_iter(), 18_446_744_073_709_551_615);
+}
+
+#[test]
+fn test_returns_the_total_number_of_grains_on_the_board_no_iter_no_funccall() {
+    assert_eq!(
+        grains::total_no_iter_no_funccall(),
+        18_446_744_073_709_551_615
+    );
+}
