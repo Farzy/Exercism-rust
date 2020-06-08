@@ -21,12 +21,15 @@
       <sourceFolder url="file://$MODULE_DIR$/sum-of-multiples/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/grains/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/grains/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/prime-factors/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/prime-factors/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/beer-song/target" />
       <excludeFolder url="file://$MODULE_DIR$/difference-of-squares/target" />
       <excludeFolder url="file://$MODULE_DIR$/grains/target" />
       <excludeFolder url="file://$MODULE_DIR$/hello-world/target" />
       <excludeFolder url="file://$MODULE_DIR$/leap/target" />
       <excludeFolder url="file://$MODULE_DIR$/nth-prime/target" />
+      <excludeFolder url="file://$MODULE_DIR$/prime-factors/target" />
       <excludeFolder url="file://$MODULE_DIR$/proverb/target" />
       <excludeFolder url="file://$MODULE_DIR$/raindrops/target" />
       <excludeFolder url="file://$MODULE_DIR$/sum-of-multiples/target" />
