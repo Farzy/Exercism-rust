@@ -55,9 +55,15 @@ fn test_wide_characters() {
 }
 
 #[test]
-#[ignore]
 #[cfg(feature = "grapheme")]
 /// grapheme clusters
 fn test_grapheme_clusters() {
     process_reverse_case("uüu", "uüu");
+}
+
+#[test]
+#[cfg(feature = "grapheme")]
+/// Test extended grapheme clusters as recommended by UAX#29
+fn test_grapheme_clusters_extended() {
+    process_reverse_case("हिन्दी", "दीन\u{94d}हि");
 }
