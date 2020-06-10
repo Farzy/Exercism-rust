@@ -5,10 +5,8 @@ pub fn reply(message: &str) -> &str {
     }
 
     let is_question = msg.ends_with('?');
-    let is_yelling = msg.chars().any(|c| c.is_ascii_alphabetic())
-        && msg
-            .chars()
-            .all(|c| !c.is_ascii_alphabetic() || c.is_ascii_uppercase());
+    let is_yelling = msg.contains(char::is_alphabetic)
+        && msg.chars().all(|c| !c.is_alphabetic() || c.is_uppercase());
 
     match (is_question, is_yelling) {
         (true, true) => "Calm down, I know what I'm doing!",
