@@ -25,6 +25,8 @@
       <sourceFolder url="file://$MODULE_DIR$/prime-factors/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/armstrong-numbers/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/armstrong-numbers/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/reverse-string/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/reverse-string/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/armstrong-numbers/target" />
       <excludeFolder url="file://$MODULE_DIR$/beer-song/target" />
       <excludeFolder url="file://$MODULE_DIR$/difference-of-squares/target" />
@@ -35,6 +37,7 @@
       <excludeFolder url="file://$MODULE_DIR$/prime-factors/target" />
       <excludeFolder url="file://$MODULE_DIR$/proverb/target" />
       <excludeFolder url="file://$MODULE_DIR$/raindrops/target" />
+      <excludeFolder url="file://$MODULE_DIR$/reverse-string/target" />
       <excludeFolder url="file://$MODULE_DIR$/sum-of-multiples/target" />
     </content>
     <orderEntry type="inheritedJdk" />
