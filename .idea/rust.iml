@@ -29,8 +29,11 @@
       <sourceFolder url="file://$MODULE_DIR$/reverse-string/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/gigasecond/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/gigasecond/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/bob/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/bob/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/armstrong-numbers/target" />
       <excludeFolder url="file://$MODULE_DIR$/beer-song/target" />
+      <excludeFolder url="file://$MODULE_DIR$/bob/target" />
       <excludeFolder url="file://$MODULE_DIR$/difference-of-squares/target" />
       <excludeFolder url="file://$MODULE_DIR$/gigasecond/target" />
       <excludeFolder url="file://$MODULE_DIR$/grains/target" />
