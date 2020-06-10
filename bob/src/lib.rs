@@ -4,7 +4,7 @@ pub fn reply(message: &str) -> &str {
         return "Fine. Be that way!";
     }
 
-    let is_question = msg.chars().last().unwrap() == '?';
+    let is_question = msg.ends_with('?');
     let is_yelling = msg.chars().any(|c| c.is_ascii_alphabetic())
         && msg
             .chars()
