@@ -11,11 +11,11 @@ impl<'a> HighScores<'a> {
     }
 
     pub fn latest(&self) -> Option<u32> {
-        self.0.last().cloned()
+        self.0.last().copied()
     }
 
     pub fn personal_best(&self) -> Option<u32> {
-        self.0.iter().max().cloned()
+        self.0.iter().max().copied()
     }
 
     pub fn personal_top_three(&self) -> Vec<u32> {
