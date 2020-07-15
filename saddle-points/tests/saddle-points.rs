@@ -1,6 +1,6 @@
 use saddle_points;
 
-use saddle_points::find_saddle_points;
+use saddle_points::{find_saddle_points, create_saddle};
 
 // We don't care about order
 fn find_sorted_saddle_points(input: &[Vec<u64>]) -> Vec<(usize, usize)> {
@@ -93,6 +93,15 @@ fn identify_all_saddle_points() {
             (2, 1),
             (2, 2)
         ],
+        find_sorted_saddle_points(&input)
+    );
+}
+
+#[test]
+fn large_matrix() {
+    let input = create_saddle((0, 20), (0, 20));
+    assert_eq!(
+        vec![(10, 10)],
         find_sorted_saddle_points(&input)
     );
 }
