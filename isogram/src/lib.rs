@@ -1,8 +1,10 @@
 pub fn check(candidate: &str) -> bool {
-    // Convert to lowercase and to array
-    let mut clean_candidate = candidate.to_lowercase().chars().collect::<Vec<_>>();
-    // Remove '-' and ' '
-    clean_candidate.retain(|&c| c != ' ' && c != '-');
+    // Convert to lowercase and to array, remove '-' and ' '
+    let mut clean_candidate = candidate
+        .to_lowercase()
+        .chars()
+        .filter(|&c| c != ' ' && c != '-')
+        .collect::<Vec<_>>();
     // Sort quickly
     clean_candidate.sort_unstable();
     // Find total length
