@@ -40,6 +40,8 @@
       <sourceFolder url="file://$MODULE_DIR$/saddle-points/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/saddle-points/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/saddle-points/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/isogram/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/isogram/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/armstrong-numbers/target" />
       <excludeFolder url="file://$MODULE_DIR$/beer-song/target" />
       <excludeFolder url="file://$MODULE_DIR$/bob/target" />
@@ -49,6 +51,7 @@
       <excludeFolder url="file://$MODULE_DIR$/grains/target" />
       <excludeFolder url="file://$MODULE_DIR$/hello-world/target" />
       <excludeFolder url="file://$MODULE_DIR$/high-scores/target" />
+      <excludeFolder url="file://$MODULE_DIR$/isogram/target" />
       <excludeFolder url="file://$MODULE_DIR$/leap/target" />
       <excludeFolder url="file://$MODULE_DIR$/matching-brackets/target" />
       <excludeFolder url="file://$MODULE_DIR$/nth-prime/target" />
