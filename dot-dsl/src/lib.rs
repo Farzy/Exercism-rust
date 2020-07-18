@@ -4,9 +4,9 @@ pub mod graph {
     use crate::graph::graph_items::edge::Edge;
 
     pub struct Graph {
-        pub nodes : Vec<graph_items::node::Node>,
-        pub edges : Vec<graph_items::edge::Edge>,
-        pub attrs : HashMap<String, String>,
+        pub nodes: Vec<graph_items::node::Node>,
+        pub edges: Vec<graph_items::edge::Edge>,
+        pub attrs: HashMap<String, String>,
     }
 
     impl Graph {
@@ -34,6 +34,13 @@ pub mod graph {
                 .map(|(key, value)| ((*key).to_owned(), (*value).to_owned()))
                 .collect();
             self
+        }
+
+        pub fn get_node(&self, nodename: &str) -> Option<Node> {
+            self.nodes
+                .iter()
+                .find(|&node| node.value == nodename)
+                .cloned()
         }
     }
 
@@ -72,13 +79,13 @@ pub mod graph {
 
             #[derive(Eq, PartialEq, Clone, Debug)]
             pub struct Node {
-                value: String,
+                pub value: String,
                 attrs: HashMap<String, String>,
             }
 
             impl Node {
                 pub fn new(value: &str) -> Self {
-                    Node{
+                    Node {
                         value: value.to_owned(),
                         attrs: Default::default(),
                     }
@@ -90,6 +97,10 @@ pub mod graph {
                         .map(|(key, value)| ((*key).to_owned(), (*value).to_owned()))
                         .collect();
                     self
+                }
+
+                pub fn get_attr(&self, attr_name: &str) -> Option<&str> {
+                    self.attrs.get(attr_name).map(|s| s.as_str())
                 }
             }
         }
