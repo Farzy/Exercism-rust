@@ -2,10 +2,11 @@ pub mod graph {
     use std::collections::HashMap;
     use crate::graph::graph_items::node::Node;
     use crate::graph::graph_items::edge::Edge;
+    use maplit::hashmap;
 
     pub struct Graph {
-        pub nodes: Vec<graph_items::node::Node>,
-        pub edges: Vec<graph_items::edge::Edge>,
+        pub nodes: Vec<Node>,
+        pub edges: Vec<Edge>,
         pub attrs: HashMap<String, String>,
     }
 
@@ -14,24 +15,25 @@ pub mod graph {
             Graph {
                 nodes: vec![],
                 edges: vec![],
-                attrs: Default::default(),
+                attrs: hashmap! {},
             }
         }
 
         pub fn with_nodes(mut self, nodes: &Vec<Node>) -> Self {
-            self.nodes = nodes.clone();
+            self.nodes.extend_from_slice(nodes);
             self
         }
 
         pub fn with_edges(mut self, edges: &Vec<Edge>) -> Self {
-            self.edges = edges.clone();
+            self.edges.extend_from_slice(edges);
             self
         }
 
         pub fn with_attrs(mut self, attrs: &[(&str, &str)]) -> Self {
             self.attrs = attrs
                 .into_iter()
-                .map(|(key, value)| ((*key).to_owned(), (*value).to_owned()))
+                .map(|(key, value)|
+                    ((*key).to_owned(), (*value).to_owned()))
                 .collect();
             self
         }
@@ -47,6 +49,7 @@ pub mod graph {
     pub mod graph_items {
         pub mod edge {
             use std::collections::HashMap;
+            use maplit::hashmap;
 
             #[derive(Eq, PartialEq, Clone, Debug)]
             pub struct Edge {
@@ -60,7 +63,7 @@ pub mod graph {
                     Edge {
                         begin: begin.to_owned(),
                         end: end.to_owned(),
-                        attrs: Default::default(),
+                        attrs: hashmap! {}
                     }
                 }
 
@@ -76,6 +79,7 @@ pub mod graph {
 
         pub mod node {
             use std::collections::HashMap;
+            use maplit::hashmap;
 
             #[derive(Eq, PartialEq, Clone, Debug)]
             pub struct Node {
@@ -87,7 +91,7 @@ pub mod graph {
                 pub fn new(value: &str) -> Self {
                     Node {
                         value: value.to_owned(),
-                        attrs: Default::default(),
+                        attrs: hashmap! {},
                     }
                 }
 
