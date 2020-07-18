@@ -1,6 +1,7 @@
 pub mod graph {
     use std::collections::HashMap;
     use crate::graph::graph_items::node::Node;
+    use crate::graph::graph_items::edge::Edge;
 
     pub struct Graph {
         pub nodes : Vec<graph_items::node::Node>,
@@ -21,26 +22,74 @@ pub mod graph {
             self.nodes = nodes.clone();
             self
         }
+
+        pub fn with_edges(mut self, edges: &Vec<Edge>) -> Self {
+            self.edges = edges.clone();
+            self
+        }
+
+        pub fn with_attrs(mut self, attrs: &[(&str, &str)]) -> Self {
+            self.attrs = attrs
+                .into_iter()
+                .map(|(key, value)| ((*key).to_owned(), (*value).to_owned()))
+                .collect();
+            self
+        }
     }
 
     pub mod graph_items {
         pub mod edge {
-            pub struct Edge(String, String);
+            use std::collections::HashMap;
+
+            #[derive(Eq, PartialEq, Clone, Debug)]
+            pub struct Edge {
+                begin: String,
+                end: String,
+                attrs: HashMap<String, String>,
+            }
 
             impl Edge {
                 pub fn new(begin: &str, end: &str) -> Self {
-                    Edge(begin.to_owned(), end.to_owned())
+                    Edge {
+                        begin: begin.to_owned(),
+                        end: end.to_owned(),
+                        attrs: Default::default(),
+                    }
+                }
+
+                pub fn with_attrs(mut self, attrs: &[(&str, &str)]) -> Self {
+                    self.attrs = attrs
+                        .into_iter()
+                        .map(|(key, value)| ((*key).to_owned(), (*value).to_owned()))
+                        .collect();
+                    self
                 }
             }
         }
 
         pub mod node {
+            use std::collections::HashMap;
+
             #[derive(Eq, PartialEq, Clone, Debug)]
-            pub struct Node(String);
+            pub struct Node {
+                value: String,
+                attrs: HashMap<String, String>,
+            }
 
             impl Node {
                 pub fn new(value: &str) -> Self {
-                    Node(value.to_owned())
+                    Node{
+                        value: value.to_owned(),
+                        attrs: Default::default(),
+                    }
+                }
+
+                pub fn with_attrs(mut self, attrs: &[(&str, &str)]) -> Self {
+                    self.attrs = attrs
+                        .into_iter()
+                        .map(|(key, value)| ((*key).to_owned(), (*value).to_owned()))
+                        .collect();
+                    self
                 }
             }
         }
