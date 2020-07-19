@@ -1,3 +1,17 @@
+// Repetitive code used in all 3 structures Graph, Node and Edge
+macro_rules! with_attrs {
+    () => {
+            pub fn with_attrs(mut self, attrs: &[(&str, &str)]) -> Self {
+            self.attrs = attrs
+                .into_iter()
+                .map(|(key, value)|
+                    ((*key).to_owned(), (*value).to_owned()))
+                .collect();
+            self
+        }
+    };
+}
+
 pub mod graph {
     use std::collections::HashMap;
     use crate::graph::graph_items::node::Node;
@@ -29,21 +43,14 @@ pub mod graph {
             self
         }
 
-        pub fn with_attrs(mut self, attrs: &[(&str, &str)]) -> Self {
-            self.attrs = attrs
-                .into_iter()
-                .map(|(key, value)|
-                    ((*key).to_owned(), (*value).to_owned()))
-                .collect();
-            self
-        }
-
         pub fn get_node(&self, nodename: &str) -> Option<Node> {
             self.nodes
                 .iter()
                 .find(|&node| node.value == nodename)
                 .cloned()
         }
+
+        with_attrs!();
     }
 
     pub mod graph_items {
@@ -67,13 +74,7 @@ pub mod graph {
                     }
                 }
 
-                pub fn with_attrs(mut self, attrs: &[(&str, &str)]) -> Self {
-                    self.attrs = attrs
-                        .into_iter()
-                        .map(|(key, value)| ((*key).to_owned(), (*value).to_owned()))
-                        .collect();
-                    self
-                }
+                with_attrs!();
             }
         }
 
@@ -95,17 +96,11 @@ pub mod graph {
                     }
                 }
 
-                pub fn with_attrs(mut self, attrs: &[(&str, &str)]) -> Self {
-                    self.attrs = attrs
-                        .into_iter()
-                        .map(|(key, value)| ((*key).to_owned(), (*value).to_owned()))
-                        .collect();
-                    self
-                }
-
                 pub fn get_attr(&self, attr_name: &str) -> Option<&str> {
                     self.attrs.get(attr_name).map(|s| s.as_str())
                 }
+
+                with_attrs!();
             }
         }
     }
