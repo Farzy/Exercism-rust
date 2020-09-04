@@ -46,6 +46,8 @@
       <sourceFolder url="file://$MODULE_DIR$/isogram/benches" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/dot-dsl/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/dot-dsl/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/perfect-numbers/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/perfect-numbers/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/armstrong-numbers/target" />
       <excludeFolder url="file://$MODULE_DIR$/beer-song/target" />
       <excludeFolder url="file://$MODULE_DIR$/bob/target" />
@@ -60,6 +62,7 @@
       <excludeFolder url="file://$MODULE_DIR$/leap/target" />
       <excludeFolder url="file://$MODULE_DIR$/matching-brackets/target" />
       <excludeFolder url="file://$MODULE_DIR$/nth-prime/target" />
+      <excludeFolder url="file://$MODULE_DIR$/perfect-numbers/target" />
       <excludeFolder url="file://$MODULE_DIR$/prime-factors/target" />
       <excludeFolder url="file://$MODULE_DIR$/proverb/target" />
       <excludeFolder url="file://$MODULE_DIR$/raindrops/target" />
