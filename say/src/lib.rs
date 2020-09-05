@@ -1,21 +1,33 @@
-
 pub fn encode(n: u64) -> String {
     if n == 0 {
         "zero".into()
-    } else if n < 10 {
-        unit(n).into()
-    } else if n < 20 {
-        ten_something(n).into()
-    } else if n < 100 {
-        if n % 10 == 0 {
-            dozen(n / 10).into()
-        } else {
-            format!("{}-{}", dozen(n / 10), unit(n % 10))
-        }
+    } else if n < 1000 {
+        thousands(n)
     } else
     {
         unimplemented!("Say {} in English.", n);
     }
+}
+
+fn thousands(n: u64) -> String {
+    let mut res: Vec<String> = Vec::new();
+    if n / 100 != 0 {
+        res.push(unit(n /100).into());
+        res.push("hundred".into());
+    }
+    let n = n % 100;
+    if n < 10 {
+        res.push(unit(n).into());
+    } else if n < 20 {
+        res.push(ten_something(n).into())
+    } else if n < 100 {
+        if n % 10 == 0 {
+            res.push(dozen(n / 10).into())
+        } else {
+            res.push(format!("{}-{}", dozen(n / 10), unit(n % 10)))
+        }
+    }
+    res.join(" ")
 }
 
 fn unit(n: u64) -> &'static str {
