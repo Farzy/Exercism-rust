@@ -4,26 +4,19 @@ pub fn encode(source: &str) -> String {
     let mut encoded = String::new();
 
     // I don't use a "for" loop here because I need to access source_iter inside the loop
-    loop {
-        match source_iter.next() {
-            // End of input
-            None => break,
-            // One char
-            Some(current_char) => {
-                // Check if there are following identical chars
-                let mut count = 1;
-                while source_iter.peek() == Some(&current_char) {
-                    count += 1;
-                    source_iter.next();
-                }
-                if count == 1 {
-                    // Only one
-                    encoded.push(current_char);
-                } else {
-                    // More than one
-                    encoded.push_str(&format!("{}{}", count, current_char));
-                }
-            }
+    while let Some(current_char) = source_iter.next() {
+        // Check if there are following identical chars
+        let mut count = 1;
+        while source_iter.peek() == Some(&current_char) {
+            count += 1;
+            source_iter.next();
+        }
+        if count == 1 {
+            // Only one
+            encoded.push(current_char);
+        } else {
+            // More than one
+            encoded.push_str(&format!("{}{}", count, current_char));
         }
     }
 
