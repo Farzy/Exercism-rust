@@ -50,6 +50,8 @@
       <sourceFolder url="file://$MODULE_DIR$/perfect-numbers/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/say/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/say/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/run-length-encoding/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/run-length-encoding/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/armstrong-numbers/target" />
       <excludeFolder url="file://$MODULE_DIR$/beer-song/target" />
       <excludeFolder url="file://$MODULE_DIR$/bob/target" />
@@ -69,6 +71,7 @@
       <excludeFolder url="file://$MODULE_DIR$/proverb/target" />
       <excludeFolder url="file://$MODULE_DIR$/raindrops/target" />
       <excludeFolder url="file://$MODULE_DIR$/reverse-string/target" />
+      <excludeFolder url="file://$MODULE_DIR$/run-length-encoding/target" />
       <excludeFolder url="file://$MODULE_DIR$/saddle-points/target" />
       <excludeFolder url="file://$MODULE_DIR$/say/target" />
       <excludeFolder url="file://$MODULE_DIR$/sum-of-multiples/target" />
