@@ -1,17 +1,16 @@
 {
   "authors": [
-    "sacherjj"
+    "divagant-martian"
   ],
   "contributors": [
     "attilahorvath",
-    "cbzehner",
+    "AvasDream",
     "coriolinus",
     "cwhakes",
-    "eddyp",
     "efx",
     "ErikSchierboom",
-    "imbolc",
     "lutostag",
+    "navossoc",
     "nfiles",
     "petertseng",
     "rofrol",
@@ -25,13 +24,13 @@
       "Cargo.toml"
     ],
     "test": [
-      "tests/nth-prime.rs"
+      "tests/run-length-encoding.rs"
     ],
     "example": [
       ".meta/example.rs"
     ]
   },
-  "blurb": "Given a number n, determine what the nth prime is.",
-  "source": "A variation on Problem 7 at Project Euler",
-  "source_url": "http://projecteuler.net/problem=7"
+  "blurb": "Implement run-length encoding and decoding.",
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Run-length_encoding"
 }
