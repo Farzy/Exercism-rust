@@ -29,14 +29,14 @@ fn thousand_multiples(n: u64) -> &'static str {
         4 => "trillion",
         5 => "quadrillion",
         6 => "quintillion",
-        _ => panic!(format!("Thousand multiple {} not implemented", n)),
+        _ => panic!("Thousand multiple {} not implemented", n),
     }
 }
 
 fn thousands(n: u64) -> String {
     let mut res: Vec<String> = Vec::new();
     if n / 100 != 0 {
-        res.push(unit(n /100).into());
+        res.push(unit(n / 100).into());
         res.push("hundred".into());
     }
     let n = n % 100;
@@ -84,7 +84,7 @@ fn ten_something(n: u64) -> &'static str {
         17 => "seventeen",
         18 => "eighteen",
         19 => "nineteen",
-        _ => panic!(format!("Invalid number: {}", n)),
+        _ => panic!("Invalid number: {}", n),
     }
 }
 
@@ -98,6 +98,6 @@ fn dozen(n: u64) -> &'static str {
         7 => "seventy",
         8 => "eighty",
         9 => "ninety",
-        _ => panic!(format!("Invalid dozen: {}", n)),
+        _ => panic!("Invalid dozen: {}", n),
     }
 }
