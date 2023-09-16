@@ -3,8 +3,8 @@
 extern crate test;
 
 pub fn is_armstrong_number(num: u32) -> bool {
-    let mut sum = 0;
-    let mut n = num;
+    let mut sum: u64 = 0;
+    let mut n = num as u64;
     let digits = ((num as f64).log10().floor()) as u32 + 1;
 
     while n != 0 {
@@ -12,7 +12,7 @@ pub fn is_armstrong_number(num: u32) -> bool {
         n /= 10;
     }
 
-    sum == num
+    sum == num as u64
 }
 
 // Compare performance to a popular solution
